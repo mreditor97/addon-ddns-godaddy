@@ -83,7 +83,7 @@ function le_renew() {
 if [ "${LE_ACCEPT_TERMS}" = 'false' ]
 then
     bashio::log.warning "Let's Encrypt Terms and Conditions have not been accepted. Not enabling Let's Encrypt."
-    bashio::log.warning "Now using GoDaddy DNS updating without Let's Encrypt."
+    bashio::log.warning "Now using GoDaddy Dynamic DNS updating without Let's Encrypt."
 fi
 
 # Register/generate certificate if terms accepted
@@ -97,7 +97,7 @@ then
     if [ -e "${WORK_DIR}/lock" ]
     then
         rm -f "${WORK_DIR}/lock"
-        bashio::log.warning "Reseting dehydrated lock file"
+        bashio::log.warning "Resetting dehydrated lock file"
     fi
 
     # Generate new certs
