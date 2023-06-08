@@ -11,7 +11,7 @@ ARG DEHYDRATED_VERSION=0.7.1
 
 RUN \
     apk add --no-cache \
-        openssl=3.1.0-r4 \
+        openssl-dev=3.1.0-r4 \
     \
     && curl -s -o /usr/bin/dehydrated \
         "https://raw.githubusercontent.com/dehydrated-io/dehydrated/v${DEHYDRATED_VERSION}/dehydrated" \
