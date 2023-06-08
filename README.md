@@ -16,7 +16,7 @@ It includes the support for creating and renewing your Let's Encrypt certificate
 
 **You must have a domain hosting account with GoDaddy and must have a GoDaddy API key before being able to use this addon.**
 
-*This is a modified version of [mrmichaelrb's][mrmichaelrb] GoDaddy DNS Updater - so all credit goes to him! Thanks!*
+_This is a modified version of [mrmichaelrb's][mrmichaelrb] GoDaddy DNS Updater - so all credit goes to him! Thanks!_
 
 [release-shield]: https://img.shields.io/github/v/release/mreditor97/addon-dns-godaddy?color=blue&include_prereleases
 [release]: https://github.com/mreditor97/addon-dns-godaddy/releases

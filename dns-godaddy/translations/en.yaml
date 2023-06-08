@@ -1,3 +1,4 @@
+---
 configuration:
   lets_encrypt:
     name: Let's Encrypt

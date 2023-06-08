@@ -12,12 +12,12 @@ Follow these steps to get the add-on installed on your system:
 
 1. Visit the [GoDaddy Developer Portal][godaddy-dev] and create a "Production" API key for the GoDaddy account that is hosting the domain you want to use for Home Assistant.
 2. In the GoDaddy DNS add-on configuration, perform the following:
-    - Copy the API key and secret tokens from GoDaddy and paste into the `key` and `secret` options.
-    - Update the `domain` option with the full domain name that is hosted by GoDaddy. E.g., `my-godaddy-domain.com`.
-    - Update the `hostname` option with a name you want to use under the domain. E.g., `my-hostname`.
+   - Copy the API key and secret tokens from GoDaddy and paste into the `key` and `secret` options.
+   - Update the `domain` option with the full domain name that is hosted by GoDaddy. E.g., `my-godaddy-domain.com`.
+   - Update the `hostname` option with a name you want to use under the domain. E.g., `my-hostname`.
 3. If you want the add-on to automatically obtain a SSL certificate from Let's Encrypt and enable HTTPS, you must agree to the [Let's Encrypt Subscriber Agreement][le-legal] and perform the following:
-    - Change `lets_encrypt.accept_terms` to `true`.
-    - Configure the [HTTP Integration][http-integration] to use the SSL certificate.
+   - Change `lets_encrypt.accept_terms` to `true`.
+   - Configure the [HTTP Integration][http-integration] to use the SSL certificate.
 
 ## Configuration
 
