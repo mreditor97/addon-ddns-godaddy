@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.17
+ARG BUILD_FROM=ghcr.io/home-assistant/amd64-base:3.18
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -11,7 +11,7 @@ ARG DEHYDRATED_VERSION=0.7.1
 
 RUN \
     apk add --no-cache \
-        openssl=3.0.8-r4 \
+        openssl=3.1.0-r4 \
     \
     && curl -s -o /usr/bin/dehydrated \
         "https://raw.githubusercontent.com/dehydrated-io/dehydrated/v${DEHYDRATED_VERSION}/dehydrated" \
