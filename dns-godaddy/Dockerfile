@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ARG BUILD_ARCH=amd64
 ARG DEHYDRATED_VERSION=0.7.1
 
-# hadolint ignore=DL3003
+# hadolint ignore=DL3018
 RUN \
     apk add --no-cache \
         openssl \
