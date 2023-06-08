@@ -1,4 +1,4 @@
-# Home Assistant Add-on: GoDaddy DNS Updater
+# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
 
 Automatically update your GoDaddy DNS IP address with integrated HTTPS support via Let's Encrypt.
 
@@ -16,15 +16,15 @@ It includes the support for creating and renewing your Let's Encrypt certificate
 
 **You must have a domain hosting account with GoDaddy and must have a GoDaddy API key before being able to use this addon.**
 
-_This is a modified version of [mrmichaelrb's][mrmichaelrb] GoDaddy DNS Updater - so all credit goes to him! Thanks!_
+_This is a modified version of [mrmichaelrb's][mrmichaelrb] GoDaddy Dynamic DNS Updater - so all credit goes to him! Thanks!_
 
-[release-shield]: https://img.shields.io/github/v/release/mreditor97/addon-dns-godaddy?color=blue&include_prereleases
-[release]: https://github.com/mreditor97/addon-dns-godaddy/releases
+[release-shield]: https://img.shields.io/github/v/release/mreditor97/addon-ddns-godaddy?color=blue&include_prereleases
+[release]: https://github.com/mreditor97/addon-ddns-godaddy/releases
 [aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
 [armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
 [i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
-[issue]: https://github.com/mreditor97/addon-dns-godaddy/issues
+[issue]: https://github.com/mreditor97/addon-ddns-godaddy/issues
 [godaddy]: https://www.godaddy.com
 [mrmichaelrb]: https://github.com/mrmichaelrb/hassio-addons

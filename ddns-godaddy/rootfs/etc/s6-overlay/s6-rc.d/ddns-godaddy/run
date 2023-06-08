@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Add-on: GoDaddy DNS Updater
-# Runs the GoDaddy DNS Updater service
+# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
+# Runs the GoDaddy Dynamic DNS Updater service
 # ==============================================================================
 
 # Derived in part from:
@@ -10,7 +10,7 @@
 # Updated from mrmichaelrb:
 # https://github.com/mrmichaelrb/hassio-addons
 
-bashio::log.info "Starting the GoDaddy DNS Updater..."
+bashio::log.info "Starting the GoDaddy Dynamic DNS Updater..."
 
 CERT_DIR=/data/letsencrypt
 WORK_DIR=/data/workdir
@@ -63,7 +63,7 @@ function le_renew() {
     bashio::log.info "Renewing certificate for domain: ${FQDN}"
 
     EXIT_CODE=0
-    dehydrated --cron --hook /usr/bin/dns-godaddy-update-hook --challenge dns-01 --domain "${FQDN}" \
+    dehydrated --cron --hook /usr/bin/ddns-godaddy-update-hook --challenge dns-01 --domain "${FQDN}" \
         --out "${CERT_DIR}" --config "${WORK_DIR}/config" \
         --force \
         || EXIT_CODE=${?}
@@ -127,7 +127,7 @@ do
     if [[ "${IPV4}" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]] && [ "${IPV4}" != "${LAST_IPV4}" ]
     then
         EXIT_CODE=0
-        /usr/bin/dns-godaddy-update set "${GODADDY_HOSTNAME}" A "${IPV4}" || EXIT_CODE=${?}
+        /usr/bin/ddns-godaddy-update set "${GODADDY_HOSTNAME}" A "${IPV4}" || EXIT_CODE=${?}
 
         if [ $EXIT_CODE -eq 0 ]
         then
@@ -141,7 +141,7 @@ do
     if [[ "${IPV6}" =~ ^([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{0,4}$ ]] && [ "${IPV6}" != "${LAST_IPV6}" ]
     then
         EXIT_CODE=0
-        /usr/bin/dns-godaddy-update set "${GODADDY_HOSTNAME}" AAAA "${IPV6}" || EXIT_CODE=${?}
+        /usr/bin/ddns-godaddy-update set "${GODADDY_HOSTNAME}" AAAA "${IPV6}" || EXIT_CODE=${?}
 
         if [ $EXIT_CODE -eq 0 ]
         then

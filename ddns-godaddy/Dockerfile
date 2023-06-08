@@ -24,10 +24,10 @@ COPY rootfs /
 
 # Ensure correct permissions
 RUN \
-    chmod a+x /etc/s6-overlay/s6-rc.d/dns-godaddy/run \
-    && chmod a+x /etc/s6-overlay/s6-rc.d/dns-godaddy/finish \
-    && chmod a+x /usr/bin/dns-godaddy-update \
-    && chmod a+x /usr/bin/dns-godaddy-update-hook
+    chmod a+x /etc/s6-overlay/s6-rc.d/ddns-godaddy/run \
+    && chmod a+x /etc/s6-overlay/s6-rc.d/ddns-godaddy/finish \
+    && chmod a+x /usr/bin/ddns-godaddy-update \
+    && chmod a+x /usr/bin/ddns-godaddy-update-hook
 
 # Build arguments
 ARG BUILD_ARCH

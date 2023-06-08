@@ -1,7 +1,7 @@
 #!/command/with-contenv bash
 # ==============================================================================
-# Home Assistant Add-on: GoDaddy DNS Updater
-# Runs the GoDaddy DNS Updater service
+# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
+# Runs the GoDaddy Dynamic DNS Updater service
 # ==============================================================================
 
 # Updated from mrmichaelrb:
