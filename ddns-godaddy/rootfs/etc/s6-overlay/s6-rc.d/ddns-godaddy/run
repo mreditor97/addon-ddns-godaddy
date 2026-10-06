@@ -1,6 +1,6 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
+# Home Assistant App: GoDaddy Dynamic DNS Updater
 # Runs the GoDaddy Dynamic DNS Updater service
 # ==============================================================================
 
@@ -22,11 +22,11 @@ GODADDY_DOMAIN="$(bashio::config 'domain')"
 GODADDY_HOSTNAME="$(bashio::config 'hostname')"
 GODADDY_TTL="$(bashio::config 'ttl')"
 
-printf "${GODADDY_KEY}" > /var/run/s6/container_environment/GODADDY_KEY
-printf "${GODADDY_SECRET}" > /var/run/s6/container_environment/GODADDY_SECRET
-printf "${GODADDY_DOMAIN}" > /var/run/s6/container_environment/GODADDY_DOMAIN
-printf "${GODADDY_HOSTNAME}" > /var/run/s6/container_environment/GODADDY_HOSTNAME
-printf "${GODADDY_TTL}" > /var/run/s6/container_environment/GODADDY_TTL
+printf '%s' "${GODADDY_KEY}" > /var/run/s6/container_environment/GODADDY_KEY
+printf '%s' "${GODADDY_SECRET}" > /var/run/s6/container_environment/GODADDY_SECRET
+printf '%s' "${GODADDY_DOMAIN}" > /var/run/s6/container_environment/GODADDY_DOMAIN
+printf '%s' "${GODADDY_HOSTNAME}" > /var/run/s6/container_environment/GODADDY_HOSTNAME
+printf '%s' "${GODADDY_TTL}" > /var/run/s6/container_environment/GODADDY_TTL
 
 FQDN="${GODADDY_HOSTNAME}.${GODADDY_DOMAIN}"
 
@@ -38,9 +38,9 @@ LE_DNS_DELAY="$(bashio::config 'lets_encrypt.dns_delay')"
 LE_RENEWAL_PERIOD="$(bashio::config 'lets_encrypt.renewal_period')"
 LE_UPDATE_FILE="${WORK_DIR}/${FQDN}.update"
 
-printf "${LE_CERTFILE}" > /var/run/s6/container_environment/LE_CERTFILE
-printf "${LE_KEYFILE}" > /var/run/s6/container_environment/LE_KEYFILE
-printf "${LE_DNS_DELAY}" > /var/run/s6/container_environment/LE_DNS_DELAY
+printf '%s' "${LE_CERTFILE}" > /var/run/s6/container_environment/LE_CERTFILE
+printf '%s' "${LE_KEYFILE}" > /var/run/s6/container_environment/LE_KEYFILE
+printf '%s' "${LE_DNS_DELAY}" > /var/run/s6/container_environment/LE_DNS_DELAY
 
 if bashio::config.has_value 'ipv4'
 then
