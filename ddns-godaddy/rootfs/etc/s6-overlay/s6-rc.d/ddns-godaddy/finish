@@ -1,6 +1,6 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
+# Home Assistant App: GoDaddy Dynamic DNS Updater
 # Take down the S6 supervision tree when GoDaddy Dynamic DNS Updater fails
 # ==============================================================================
 

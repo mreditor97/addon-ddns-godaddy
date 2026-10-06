@@ -1,6 +1,6 @@
 #!/command/with-contenv bashio
 # ==============================================================================
-# Home Assistant Add-on: GoDaddy Dynamic DNS Updater
+# Home Assistant App: GoDaddy Dynamic DNS Updater
 # Runs the GoDaddy Dynamic DNS Updater service
 # ==============================================================================
 
